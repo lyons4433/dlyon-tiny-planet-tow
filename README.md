@@ -14,6 +14,7 @@ Controls:
 - `F`: fire the blaster
 - `R`: reset the route
 - Mobile: use the left joystick to steer, then use Hook, Fire, In, and Out buttons
+- Mission HUD: fades into a small mission tab during play; click or tap it to expand
 
 Prototype goal:
 
@@ -36,3 +37,4 @@ Challenge layer:
 - Emergency events can trigger meteor walls, UFO convoys, magnetic squalls, or load-zone blackouts
 - Sound effects and light generated background music start after the first key press or click
 - Desktop and mobile browser testing are both supported from the same GitHub Pages link
+- Mission and status panels auto-collapse during play so the route stays visible
