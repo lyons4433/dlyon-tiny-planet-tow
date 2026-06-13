@@ -28,6 +28,7 @@ Challenge layer:
 - Shoot hazards to clear your path, but each destroyed object adds two smaller hazards back into play
 - Each completed tow earns a 1-3 star rating
 - Use the bottom-right compass to find the blue load zone when you drift away
+- The compass points to the tow target until the correct cargo is attached, then switches to the load zone
 - Spend credits between jobs on hook range, line strength, handling, and ship paint
 - Reinforced line upgrades increase real line integrity, letting the tow cable survive more hits
 - Meteor showers can knock the ship, damage cargo, or snap the tow line
