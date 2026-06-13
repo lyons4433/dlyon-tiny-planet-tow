@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
     <title>Tiny Planet Tow Co. Prototype</title>
-    <link rel="stylesheet" href="styles.css?v=20260614">
+    <link rel="stylesheet" href="styles.css?v=20260615">
   </head>
   <body>
     <main class="shell">
@@ -100,12 +100,12 @@
         </div>
       </section>
 
-      <section class="compass" aria-label="Load zone navigation">
+      <section class="compass" aria-label="Route navigation">
         <div class="compass-face">
           <span id="compassArrow" class="compass-arrow"></span>
         </div>
         <div>
-          <p class="eyebrow">Load zone</p>
+          <p id="compassLabel" class="eyebrow">Tow target</p>
           <strong id="compassDistance">0m</strong>
         </div>
       </section>
@@ -154,8 +154,9 @@
       <div id="toast" class="toast">Tow route online</div>
     </main>
 
-    <script src="game.js?v=20260614"></script>
-    <script src="mobile.js?v=20260614"></script>
-    <script src="hud.js?v=20260614"></script>
+    <script src="game.js?v=20260615"></script>
+    <script src="navigation.js?v=20260615"></script>
+    <script src="mobile.js?v=20260615"></script>
+    <script src="hud.js?v=20260615"></script>
   </body>
 </html>
