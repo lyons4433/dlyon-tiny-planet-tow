@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
     <title>Tiny Planet Tow Co. Prototype</title>
-    <link rel="stylesheet" href="styles.css?v=20260612">
+    <link rel="stylesheet" href="styles.css?v=20260613">
   </head>
   <body>
     <main class="shell">
@@ -85,7 +85,7 @@
             </div>
             <div>
               <strong>Controls</strong>
-              <span>Use WASD or arrow keys to fly, Space or click to hook/release, Q/E to adjust the tow line, and F to fire.</span>
+              <span>Use WASD or arrow keys on desktop. On mobile, steer with the left pad and use the right-side buttons.</span>
             </div>
             <div>
               <strong>Watch out</strong>
@@ -139,9 +139,22 @@
         </div>
       </section>
 
+      <section class="touch-controls" aria-label="Mobile flight controls">
+        <div id="touchStick" class="touch-stick" aria-label="Move ship">
+          <span id="touchKnob"></span>
+        </div>
+        <div class="touch-actions">
+          <button type="button" data-touch-action="hook">Hook</button>
+          <button type="button" data-touch-action="fire">Fire</button>
+          <button type="button" data-touch-hold="winch-in">In</button>
+          <button type="button" data-touch-hold="winch-out">Out</button>
+        </div>
+      </section>
+
       <div id="toast" class="toast">Tow route online</div>
     </main>
 
-    <script src="game.js?v=20260612"></script>
+    <script src="game.js?v=20260613"></script>
+    <script src="mobile.js?v=20260613"></script>
   </body>
 </html>
