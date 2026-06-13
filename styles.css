@@ -47,6 +47,7 @@ body {
   gap: 12px;
   align-items: start;
   pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease;
 }
 
 .brand,
@@ -57,6 +58,8 @@ body {
   background: var(--panel);
   box-shadow: 0 16px 42px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(12px);
+  pointer-events: auto;
+  transition: opacity 220ms ease, transform 220ms ease, max-height 220ms ease, padding 220ms ease;
 }
 
 .brand {
@@ -102,6 +105,7 @@ h2 {
   min-height: 94px;
   padding: 14px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .job-row {
@@ -214,6 +218,59 @@ h2 {
   border: 1px solid rgba(245, 247, 239, 0.15);
   border-radius: 6px;
   background: rgba(245, 247, 239, 0.08);
+}
+
+.hud.hud-collapsed {
+  grid-template-columns: minmax(176px, 300px);
+  width: min(300px, calc(100vw - 24px));
+  opacity: 0.88;
+}
+
+.hud.hud-collapsed .brand,
+.hud.hud-collapsed .stats-panel,
+.hud.hud-collapsed .controls {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+}
+
+.hud.hud-collapsed .job-panel {
+  min-height: 0;
+  padding: 9px 11px;
+  background: rgba(8, 17, 24, 0.62);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.hud.hud-collapsed .job-panel .eyebrow {
+  margin: 0;
+  font-size: 9px;
+}
+
+.hud.hud-collapsed .job-panel h2 {
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.hud.hud-collapsed .job-row {
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.hud.hud-collapsed #jobStatus {
+  display: none;
+}
+
+.hud.hud-collapsed .job-row::before {
+  content: "Tap for mission info";
+}
+
+.hud.hud-collapsed .progress-track {
+  height: 4px;
+  margin-top: 7px;
+  opacity: 0.72;
 }
 
 .toast {
@@ -579,6 +636,24 @@ h2 {
     gap: 8px;
   }
 
+  .hud.hud-collapsed {
+    grid-template-columns: minmax(156px, 240px);
+    width: min(240px, calc(100vw - 16px));
+    opacity: 0.78;
+  }
+
+  .hud.hud-collapsed .job-panel {
+    padding: 7px 9px;
+  }
+
+  .hud.hud-collapsed .job-panel h2 {
+    font-size: 13px;
+  }
+
+  .hud.hud-collapsed .job-row {
+    font-size: 9px;
+  }
+
   .brand {
     display: none;
   }
@@ -690,6 +765,10 @@ h2 {
   .hud {
     grid-template-columns: 1fr;
     max-width: calc(100vw - 16px);
+  }
+
+  .hud.hud-collapsed {
+    max-width: min(230px, calc(100vw - 16px));
   }
 
   .stats-panel {
